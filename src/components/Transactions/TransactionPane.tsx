@@ -8,9 +8,6 @@ export const TransactionPane: TransactionPaneComponent = ({
   setTransactionApproval: consumerSetTransactionApproval,
 }) => {
   const [approved, setApproved] = useState(transaction.approved)
-  
-
-
 
   return (
     <div className="RampPane">
@@ -21,7 +18,6 @@ export const TransactionPane: TransactionPaneComponent = ({
           {transaction.employee.firstName} {transaction.employee.lastName} - {transaction.date}
         </p>
       </div>
-      
       <InputCheckbox
         id={transaction.id}
         checked={approved}
@@ -32,7 +28,6 @@ export const TransactionPane: TransactionPaneComponent = ({
             newValue,
           })
           setApproved(newValue)
-          
         }}
       />
     </div>
